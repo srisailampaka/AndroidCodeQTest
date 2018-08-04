@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.quandoo.restaurant"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+final SUPPORT_LIBRARY_VERSION = '26.1.0'
+final BUTTERKNIFE_VERSION = '8.5.1'
+final RETROFIT = '2.0.2'
+final GSON = '2.8.0'
+final CONSTRAINT_LAYOUT = '1.1.2'
+
+implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+// android support dependencies
+implementation "com.android.support:support-v4:$SUPPORT_LIBRARY_VERSION"
+implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
+implementation "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
+implementation "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
+implementation "com.android.support:recyclerview-v7:$SUPPORT_LIBRARY_VERSION"
+implementation "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
+
+//butterknife
+
+implementation "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
+implementation 'com.android.support:recyclerview-v7:26.1.0'
+annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
+
+//reftrofit
+
+implementation "com.google.code.gson:gson:$GSON"
+implementation "com.squareup.retrofit2:retrofit:$RETROFIT"
+implementation "com.squareup.retrofit2:converter-gson:$RETROFIT"
+
+implementation "com.android.support.constraint:constraint-layout:$CONSTRAINT_LAYOUT"
+testImplementation 'junit:junit:4.12'
+}

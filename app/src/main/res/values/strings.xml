@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuandooAndroidApp</string>
+    <string name="try_again">Try again</string>
+    <string name="error_connection">No internet connection detected</string>
+    <string name="book_table">Book table</string>
+    <string name="action_settings">Settings</string>
+</resources>
